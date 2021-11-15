@@ -3,7 +3,7 @@ ROOTFS_PATH=$(find . -maxdepth 1 -mindepth 1 -type d -name .debos-*)/root
 ROOTFS_SIZE=$(du -sm $ROOTFS_PATH | awk '{ print $1 }')
 
 ZIP_NAME=$1
-IMG_SIZE=$(( ${ROOTFS_SIZE} + 250 )) # FIXME 250MB contingency
+IMG_SIZE=$(( ${ROOTFS_SIZE} + 250 )) # FIXME  250MB contingency
 IMG_MOUNTPOINT=".image"
 
 # create root img
